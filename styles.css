@@ -1,0 +1,468 @@
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*----------------------------------------------------------------------*/
+
+
+html {
+    background-color:#020659;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    margin: auto;
+    width: 375px;
+    background-color:#ffffff;
+}
+
+
+header{
+  width: 100%;
+  background-color:#030A8c;
+  margin:0px;
+  color: #ffffff;
+}
+
+
+header h2{
+    padding-top: 12px;
+    padding-left: 40px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+header p{
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 12px;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    
+    
+}
+
+nav a{
+    color:#ffffff;
+    padding-bottom: 24px;
+    padding-top:12px;
+}
+
+#trending {
+  background-color: #ffffff;
+  color: #590242;
+  display: grid;
+  padding:12px;
+}
+
+#trending h2{
+    padding-left: 24px;
+}
+
+#playlists {
+    background-color: #ffffff;
+    color: #590242;
+    display: grid;
+    padding:12px;
+  }
+
+
+
+
+h3{
+    padding-left:24px;
+}
+/*-----------------------------------*/
+.scroll{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.scroll section{
+    margin:10px;
+    position: relative;
+}
+
+.scroll div{
+    position: absolute;
+    top: 251px;
+    background-color:rgba(255,255,255,.75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+/*----------------------------*/
+.scrolltwo{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color:#2699db;
+    padding:10px;
+}
+
+.scrolltwo section{
+    margin:10px;
+    position: relative;
+    background-color:#0d8dfb;
+    color:#ffffff;
+    text-align:center;
+    
+    
+}
+
+.scrolltwo div{
+    position: absolute;
+    top: 251px;
+    background-color:rgba(255,255,255,.75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+
+/*---------------------------*/
+.scrollthree{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color:#030A8c;
+    padding:10px;
+
+}
+
+.scrollthree section{
+    margin:10px;
+    position: relative;
+    background-color:#020873;
+    color:#ffffff;
+    text-align:center;
+}
+
+.scrollthree div{
+    position: absolute;
+    top: 251px;
+    background-color:rgba(255,255,255,.75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+
+/*-------------------------------------*/
+
+
+
+
+
+
+
+dl{
+    display:flex;
+}
+dt{
+padding-right: 5px;
+}
+audio{
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+div h3{
+    margin:0;
+    padding-top: 4px;
+    padding-left: 4px;
+}
+div dl{
+    margin-top: 12px;
+    padding-left: 4px;
+    
+}
+div dd{
+    margin-left:12px;
+}
+button{
+    background-color:#590242;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#ffffff;
+    width: 50%;
+    text-align: center ;
+    border: none;
+    display: inline-block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 4px;
+    margin-top: 12px;
+    margin-left: 24px;
+    
+}
+
+footer{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#590242;
+    padding:24px;
+    text-align:center;
+}
+
+
+
+
+
+
+
+/*Hamburger menu code*/
+
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        
+    }
+    label span, input {
+        display: none;
+    }
+    nav{
+        display:grid;
+    }
+    nav li{
+        justify-self: center;
+    }
+    header{
+        margin:0px;
+    }
+    header p{
+        padding-left: 40px;
+        margin-top:12px;
+    }
+    
+    header h2{
+        padding-top:60px;
+        margin-bottom: 8px;
+        
+    }
+
+
+/*------------------------------------------------*/
+
+
+
+
+    body{
+        margin-top:0;
+    }
+
+    body{
+        margin: auto;
+        width: 834px;
+        background-color:#ffffff;
+    }
+  
+
+#bothplaylists{
+    display:grid;
+    grid-template-columns: 400px 400px;
+}
+#playlistsone{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#playliststwo{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+button{
+margin-left: 175px;
+}
+
+button:hover{
+    background-color:#020659;
+}
+nav:hover{
+    background-color: #590242;
+}
+
+.scrollthree section{
+    height: 264px;
+    
+}
+/*-------------------------------------------*/
+.scrolltwo{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 200px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    height:300px;
+    background-color:#2699db;  
+}
+.scrolltwo section{
+    display:inline grid;
+    grid-template-columns: 1fr 2fr;
+    
+}
+.scrolltwo img{
+    height: 100px;
+    grid-row: 1;
+    
+}
+.scrolltwo p{
+grid-column: 2/3;
+align-self:start;
+}
+
+.scrollthree{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 200px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    height:300px;
+    background-color:##020873;  
+}
+.scrollthree section{
+    display:inline grid;
+    grid-template-columns: 1fr 2fr;
+    
+}
+.scrollthree img{
+    height: 100px;
+    grid-row: 1;
+    
+}
+.scrollthree p{
+grid-column: 2/3;
+align-self:start;
+}
+
+}
+
+/*__________________________________________________________________________*/
+Scroll
+
+#trending ::-webkit-scrollbar {
+
+}
+#trending ::-webkit-scrollbar-track {
+
+}
+#trending ::-webkit-scrollbar-thumb {
+
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+}
